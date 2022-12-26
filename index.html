@@ -50,9 +50,11 @@
             <div class="modal-body">
               <p>Task Title</p>
               <input class="form-control" type="text" name="" id="textInput" />
+              <div id="message"></div>
               <br />
               <p>Due Date</p>
               <input class="form-control" type="date" name="" id="dateInput" />
+
               <br />
               <p>Description</p>
               <textarea
@@ -71,7 +73,9 @@
               >
                 Close
               </button>
-              <button type="submit" class="btn btn-primary">Add</button>
+              <button type="submit" id="add" class="btn btn-primary">
+                Add
+              </button>
             </div>
           </div>
         </div>
@@ -84,8 +88,13 @@
           <p>Coding Morning Routine</p>
 
           <span class="options">
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash-alt"></i>
+            <i
+              onclick="editTask(this)"
+              data-bs-toggle="modal"
+              data-bs-target="#form"
+              class="fas fa-edit"
+            ></i>
+            <i onclick="deleteTask(this)" class="fas fa-trash-alt"></i>
           </span>
         </div>
         <div>
@@ -94,14 +103,19 @@
           <p>Sport Morning Routine</p>
 
           <span class="options">
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash-alt"></i>
+            <i
+              onclick="editTask(this)"
+              data-bs-toggle="modal"
+              data-bs-target="#form"
+              class="fas fa-edit"
+            ></i>
+            <i onclick="deleteTask(this)" class="fas fa-trash-alt"></i>
           </span>
         </div>
       </div>
     </div>
 
-    <script src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
